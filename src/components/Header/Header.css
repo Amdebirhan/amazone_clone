@@ -10,7 +10,7 @@
     background-color: #131921;
     position: sticky;
     top: 0;
-    z-index: 100%;
+    z-index: 2;
 }
 
 .header__logo{
@@ -53,9 +53,10 @@
     font-weight: 800;
 }
 
-.header__basket{
+.header__basket a{
     display: flex;
     align-items: center;
+    text-decoration: none;
     color: white;
 }
 .header__basketCount{
