@@ -48,11 +48,16 @@
 .header__optionLineOne{
     font-size: 10px;
 }
-.header__optionLineTwo{
+.header__optionLineTwo {
     font-size: 13px;
     font-weight: 800;
 }
 
+.header__nav a{
+    color: white;
+    text-decoration: none;
+
+}
 .header__basket a{
     display: flex;
     align-items: center;

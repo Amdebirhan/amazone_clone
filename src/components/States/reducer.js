@@ -1,7 +1,7 @@
 //create the initial state that manuplated by the app
 export const initialState = {
     basket: [],//products that a user choose
-    //user: null,//is the user that sign in to our site osed for delivery location, gifts and other...
+    user: null,//is the user that sign in to our site osed for delivery location, gifts and other...
 }
 
 //selector
@@ -12,11 +12,15 @@ export const getBasketTotal = (basket) => {
 
 const reducer = (state/*what the current state of the data is*/, action/*what we want to do with the app*/) => {
     switch (action.type) {
-
         case 'ADD_TO_BASKET':
             return {
                 ...state,//return what ever the privious state is and
                 basket: [...state.basket, action.item] //what ever priviously in the basket and add the new item to the basket
+            };
+        case 'SET_USER':
+            return {
+                ...state,
+                user: action.user
             };
         case 'REMOVE_FROM_BASKET':
             const index = state.basket.findIndex((basketItem) => basketItem.id === action.id);
